@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">V1</string>
+    <string name="show_name">阿弥陀佛</string>
+    <string name="yy_msg">Auto Start on boot complete!\n</string>
+</resources>
