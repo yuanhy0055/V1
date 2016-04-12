@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"/>
 
     <application
         android:allowBackup="true"
@@ -11,14 +12,8 @@
         android:label="@string/show_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".act2">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".F1Activity"></activity>
+        <activity android:name=".F1Activity" />
+        <activity android:name=".act2" />
 
         <receiver
             android:name=".NkReceiver"
@@ -26,12 +21,18 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
-
+                <!--<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
                 <category android:name="android.intent.category.HOME" />
-                <!-- category android:name="android.intent.category.LAUNCHER" / -->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
             </intent-filter>
         </receiver>
 
+        <activity android:name=".act3">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
