@@ -13,6 +13,9 @@ import android.widget.Button;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+/**
+ * FORCE STOP 研究
+ */
 public class act3 extends AppCompatActivity {
 
 
@@ -42,7 +45,7 @@ public class act3 extends AppCompatActivity {
                 method.setAccessible(true);
 
                 try {
-                    method.invoke(mActivityManager, "com.tencent.mm");  //packageName是需要强制停止的应用程序包名
+                    method.invoke(mActivityManager, "com.android.email");  //packageName是需要强制停止的应用程序包名
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 } catch (InvocationTargetException e) {

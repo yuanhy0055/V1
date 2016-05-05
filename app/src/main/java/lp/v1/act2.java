@@ -10,6 +10,9 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * WakeLock 研究
+ */
 public class act2 extends Activity {
 
     private WakeLock mWakeLock;

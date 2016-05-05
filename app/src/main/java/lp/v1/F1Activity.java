@@ -13,6 +13,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 
+/**
+ * 研究
+ */
 public class F1Activity extends Activity {
     private static final String TGG = "YYUAN";
     private EditText et = null;
