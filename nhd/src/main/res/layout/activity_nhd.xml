@@ -7,10 +7,44 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="lp.v3.Nhd">
+    tools:context="lp.v3.Nhd"
+    android:background="@color/colorPrimaryDark">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Hello"
+        android:textColor="@android:color/white"
+        android:id="@+id/textView"
+        android:textSize="36dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textNoSuggestions|textMultiLine"
+        android:ems="10"
+        android:id="@+id/yyet"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="left|top"
+        android:textColor="@android:color/holo_orange_light"
+        android:layout_below="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/button1"
+        android:layout_above="@+id/yyet"
+        android:layout_toEndOf="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:id="@+id/button2"
+        android:layout_above="@+id/yyet"
+        android:layout_toEndOf="@+id/button1" />
 </RelativeLayout>
