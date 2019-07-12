@@ -12,12 +12,21 @@ using namespace std;
 int c_main(void);
 int start_logger(const char *app_name);
 
+jint JNI_OnLoad(JavaVM* vm, void* reserved)
+{
+    JNIEnv* env;
+    if (vm->GetEnv(reinterpret_cast<void**>(&env), JNI_VERSION_1_6) != JNI_OK) {
+        return -1;
+    }
+    start_logger("TTGG");
+    return JNI_VERSION_1_6;
+}
+
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_ag_ndktest_MainActivity_stringFromJNI(
         JNIEnv *env,
         jobject /* this */) {
 
-    start_logger("TTGG");
     c_main();
 
     std::string hello = "Hello from C++";
@@ -61,9 +70,9 @@ int c_main(void)
     Function1();
     cout << "boost demo test end ..." << endl;
 
-    while (1) {
-        sleep(1);
-    }
+//    while (1) {
+//        sleep(1);
+//    }
 
     return 0;
 }
