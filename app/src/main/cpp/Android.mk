@@ -7,6 +7,7 @@ BOOST_LIB_PATH		:= E:/PWB/yyboostlib/x86_64/lib
 
 LOCAL_MODULE    := ndk-test-lib
 LOCAL_SRC_FILES := main.cpp \
+                   CMyClass.cpp \
                    android_buf.cpp
 
 LOCAL_C_INCLUDES	:= $(BOOST_INCLUDE_PATH)
