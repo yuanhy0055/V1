@@ -12,6 +12,7 @@ using namespace std;
 int c_main(void);
 int start_logger(const char *app_name);
 
+// https://github.com/yuanhy0055/rcVLC/blob/master/Vlc_01/jni/yyomxil.cpp
 jint JNI_OnLoad(JavaVM* vm, void* reserved)
 {
     JNIEnv* env;
